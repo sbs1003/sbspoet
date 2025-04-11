@@ -24,7 +24,13 @@ import time
 # result = chat_model.invoke("hi! today's weather")
 
 # Chat 방식
+#from langchain_openai import ChatOpenAI
+#from langchain.chat_models import ChatOpenAI
+# from langchain_community.chat_models import ChatOpenAI
 from langchain_openai import ChatOpenAI
+from langchain.globals import set_verbose
+set_verbose(True)
+
 chat_model = ChatOpenAI()
 
 content = "코딩"
@@ -40,6 +46,7 @@ content = st.text_input("시의 주제를 제세해주세요!")
 if st.button("시 작성 요청하기"):
     with st.spinner("시 작성 중"):
         result = chat_model.invoke(content + "에 대해 시를 써줘")
+#        result = chat_model.predict(content + "에 대해 시를 써줘")        
         st.write(result.content)
 
 
