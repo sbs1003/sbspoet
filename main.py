@@ -1,3 +1,6 @@
+#모든 컴파일 오류/경고 해결
+# 그러나 터미널에서 실행시 문제가 전혀 없으나 streamlit 에서 앱만들때 실행 에러 발생
+
 #from dotenv import load_dotenv
 import getpass
 import os
@@ -40,7 +43,7 @@ content = "코딩"
 
 import streamlit as st
 
-st.title("인공지능 시인")
+st.title("poet2폴더, main.py 컴파일 오류 해결 버전")
 content = st.text_input("시의 주제를 제세해주세요!")
 
 if st.button("시 작성 요청하기"):
