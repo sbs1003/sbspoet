@@ -1,13 +1,13 @@
 #모든 컴파일 오류/경고 해결
 # 그러나 터미널에서 실행시 문제가 전혀 없으나 streamlit 에서 앱만들때 실행 에러 발생
 
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 import getpass
 import os
 # import streamlit as st
 import time
 
-#load_dotenv(override=True) 
+load_dotenv(override=True) 
 
 # print("OPENAI_API_KEY:", os.getenv("OPENAI_API_KEY"))
 # print("GROQ_API_KEY:", os.getenv("GROQ_API_KEY"))
@@ -31,6 +31,7 @@ import time
 #from langchain.chat_models import ChatOpenAI
 # from langchain_community.chat_models import ChatOpenAI
 from langchain_openai import ChatOpenAI
+
 from langchain.globals import set_verbose
 set_verbose(True)
 
